@@ -20,6 +20,19 @@
             <div>
                 <h2>Minuteur</h2>
                 <i class="far fa-hourglass"></i>
+
+                <form name="formulaire">
+                    <input type="number" name="Clock" id="minuteur">
+
+                    <label for="Time">Time:</label>
+                    <input type="number" name="Time" id="my_Minuteur">
+                    <button id="send_minuteur">Envoyer</button> <br>
+
+                    <button id="more_time"> + </button>
+                    <button id="less_time"> - </button>
+
+                    
+                </form>
             </div>
 
             <div>
@@ -35,6 +48,7 @@
             <div>
                 <h2>Horloge</h2>
                 <i class="fas fa-clock"></i>
+                <span id="horloge"></span>
             </div>
         </main>
 
