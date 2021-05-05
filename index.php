@@ -1,3 +1,5 @@
+<!-- Le but de ce projet est de reproduire un minuteur, un chronomètre, un réveil, et une horloge -->
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -7,6 +9,12 @@
     <title>O'clockt</title>
 </head>
     <body>
-        
+        <header></header>
+
+        <main>
+            <h1>O'Clock</h1>
+        </main>
+
+        <footer></footer>
     </body>
 </html>
