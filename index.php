@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/56188ecd90.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ressources/style.css">
     <title>O'clockt</title>
     
 </head>
@@ -35,23 +35,37 @@
                 </form>
             </div>
 
-            <div>
-                <h2>Chronomètre</h2>
-                <i class="fas fa-stopwatch"></i>
+                <br><br><br><br>
 
-                <nav class="controls">
-                    <a href="#" class="button" onClick="stopwatch.start();">Start</a>
-                    <a href="#" class="button" onClick="stopwatch.lap();">Lap</a>
-                    <a href="#" class="button" onClick="stopwatch.stop();">Stop</a>
-                    <a href="#" class="button" onClick="stopwatch.restart();">Restart</a>
-                    <a href="#" class="button" onClick="stopwatch.clear();">Clear Laps</a>
-                </nav>
-
-                <div class="stopwatch"></div>
-                
-                <ul class="results"></ul>
-
+            <div class="stopwatch">
+                <h1><span class="gold">GOLD</span> STOPWATCH</h1>
+                <div class="circle">
+                    <span class="time" id="display">00:00:00</span>
                 </div>
+
+                <div class="controls">
+                    <button class="buttonPlay">
+                    <img id="playButton" src="https://res.cloudinary.com/https-tinloof-com/image/upload/v1593360448/blog/time-in-js/play-button_opkxmt.svg" />
+
+                    <img id="pauseButton" src="https://res.cloudinary.com/https-tinloof-com/image/upload/v1593360448/blog/time-in-js/pause-button_pinhpy.svg" />
+                    </button>
+
+                    <button class="buttonReset">
+                    <img id="resetButton" src="https://res.cloudinary.com/https-tinloof-com/image/upload/v1593360448/blog/time-in-js/reset-button_mdv6wf.svg" />
+                    </button>
+
+                    <button id="lapButton">Lap</button>
+                    
+                    <ul id="lapDisplay">
+                    
+                    </ul>
+
+                    <button id="clearButton">Clear</button>
+                </div>
+            </div>
+
+            <br><br><br><br>
+
 
             <div>
                 <h2>Réveil</h2>
