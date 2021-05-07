@@ -12,12 +12,13 @@
     
 </head>
     <body>
+
         <header></header>
 
         <main>
             <h1>O'Clock</h1>
 
-            <div>
+            <section>
                 <h2>Minuteur</h2>
                 <i class="far fa-hourglass"></i>
 
@@ -33,25 +34,26 @@
 
                     
                 </form>
-            </div>
+            </section>
 
                 <br><br><br><br>
 
-            <div class="stopwatch">
-                <h1><span class="gold">GOLD</span> STOPWATCH</h1>
-                <div class="circle">
+            <section class="stopwatch">
+                <h1>STOPWATCH</h1>
+
+                <article class="circle">
                     <span class="time" id="display">00:00:00</span>
-                </div>
+                </article>
 
                 <div class="controls">
                     <button class="buttonPlay">
-                    <img id="playButton" src="https://res.cloudinary.com/https-tinloof-com/image/upload/v1593360448/blog/time-in-js/play-button_opkxmt.svg" />
+                        <img id="playButton" src="https://res.cloudinary.com/https-tinloof-com/image/upload/v1593360448/blog/time-in-js/play-button_opkxmt.svg" />
 
-                    <img id="pauseButton" src="https://res.cloudinary.com/https-tinloof-com/image/upload/v1593360448/blog/time-in-js/pause-button_pinhpy.svg" />
+                        <img id="pauseButton" src="https://res.cloudinary.com/https-tinloof-com/image/upload/v1593360448/blog/time-in-js/pause-button_pinhpy.svg" />
                     </button>
 
                     <button class="buttonReset">
-                    <img id="resetButton" src="https://res.cloudinary.com/https-tinloof-com/image/upload/v1593360448/blog/time-in-js/reset-button_mdv6wf.svg" />
+                        <img id="resetButton" src="https://res.cloudinary.com/https-tinloof-com/image/upload/v1593360448/blog/time-in-js/reset-button_mdv6wf.svg" />
                     </button>
 
                     <button id="lapButton">Lap</button>
@@ -62,24 +64,61 @@
 
                     <button id="clearButton">Clear</button>
                 </div>
-            </div>
+            </section>
 
             <br><br><br><br>
 
 
-            <div>
+            <section>
                 <h2>Réveil</h2>
                 <i class="fas fa-bell"></i>
-            </div>
+                <span id="reveil"></span>
 
-            <div>
+
+                <div id='alarm-container'>
+                    <h3>Set Alarm Time</h3>
+
+                    <label>
+                        <div>
+                        <select id='alarmhrs' ></select>
+                        </div>
+                    </label>
+
+
+                    <label>
+                        <div>
+                        <select id='alarmmins' ></select>
+                        </div>
+                    </label>
+
+
+                    <label>
+                        <div>
+                        <select id='alarmsecs' ></select>
+                        </div>
+                    </label>
+
+
+                    <label>
+                        <div>
+                            <select id="ampm">
+                                <option value="AM">AM</option>
+                                <option value="PM">PM</option>
+                            </select>
+                        </div>
+                    </label>
+                </div>
+            </section>
+
+            <section>
                 <h2>Horloge</h2>
                 <i class="fas fa-clock"></i>
                 <span id="horloge"></span>
-            </div>
+            </section>
         </main>
 
         <footer></footer>
+
         <script src="ressources/script.js"></script>
     </body>
 </html>

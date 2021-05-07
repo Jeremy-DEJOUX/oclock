@@ -4,6 +4,11 @@
 // let more_time = document.getElementById("more_time");
 // let less_time = document.getElementById("less_time");
 
+
+
+
+// ORLOGE================================
+
 let myVar = setInterval(myTimer, 1000);
 
 function myTimer() {
@@ -106,3 +111,64 @@ pauseButton.addEventListener("click", pause);
 resetButton.addEventListener("click", reset);
 lapButton.addEventListener("click", lap);
 clearButton.addEventListener("click", clearLap);
+
+
+
+
+
+
+// REVEIL======================
+
+let myclock = setInterval(myAlarm, 1000);
+
+function myAlarm() {
+    let reveil = new Date();
+    document.getElementById("reveil").innerHTML = reveil.toLocaleTimeString();
+}
+
+function hoursMenu() {
+
+    var select = document.getElementById('alarmhrs');
+    var hrs = 12
+
+    for (i = 1; i <= hrs; i++) {
+        select.options[select.options.length] = new Option(i < 10 ? "0" + i : i, i);
+
+    }
+}
+hoursMenu();
+
+function minMenu() {
+
+    var select = document.getElementById('alarmmins');
+    var min = 59;
+
+    for (i = 0; i <= min; i++) {
+        select.options[select.options.length] = new Option(i < 10 ? "0" + i : i, i);
+    }
+}
+minMenu();
+
+function secMenu() {
+
+    var select = document.getElementById('alarmsecs');
+    var sec = 59;
+
+    for (i = 0; i <= sec; i++) {
+        select.options[select.options.length] = new Option(i < 10 ? "0" + i : i, i);
+    }
+}
+secMenu();
+
+
+
+
+
+
+
+
+
+// MINUTEUR======================
+
+
+
