@@ -119,46 +119,27 @@ clearButton.addEventListener("click", clearLap);
 
 // REVEIL======================
 
-let myclock = setInterval(myAlarm, 1000);
+let timer = document.getElementById('timer');
+let hours = document.getElementById('hours');
+let minutes = document.getElementById('minutes');
+let secondes = document.getElementById('secondes');
+let ampm = document.getElementById('ampm');
+let startstop = document.getElementById('startstop');
 
-function myAlarm() {
-    let reveil = new Date();
-    document.getElementById("reveil").innerHTML = reveil.toLocaleTimeString();
+let currentTime;
+let alarmElement;
+let activeAlarm = false;
+let sound;
+// sound.loop = true;
+
+function showTime() {
+    let now = new Date();
+    currentTime = now.toLocaleTimeString();
+    timer.textContent = currentTime;
+    setTimeout(showTime, 1000);
 }
 
-function hoursMenu() {
-
-    var select = document.getElementById('alarmhrs');
-    var hrs = 12
-
-    for (i = 1; i <= hrs; i++) {
-        select.options[select.options.length] = new Option(i < 10 ? "0" + i : i, i);
-
-    }
-}
-hoursMenu();
-
-function minMenu() {
-
-    var select = document.getElementById('alarmmins');
-    var min = 59;
-
-    for (i = 0; i <= min; i++) {
-        select.options[select.options.length] = new Option(i < 10 ? "0" + i : i, i);
-    }
-}
-minMenu();
-
-function secMenu() {
-
-    var select = document.getElementById('alarmsecs');
-    var sec = 59;
-
-    for (i = 0; i <= sec; i++) {
-        select.options[select.options.length] = new Option(i < 10 ? "0" + i : i, i);
-    }
-}
-secMenu();
+showTime();
 
 
 
