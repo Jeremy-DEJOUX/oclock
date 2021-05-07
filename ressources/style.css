@@ -67,3 +67,19 @@ button {
 #pauseButton {
     display: none;
 }
+
+
+#reveil_box{
+    width: 100vw;
+    height: 40vh;
+    background-color: beige;
+}
+
+#alarm-container{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
