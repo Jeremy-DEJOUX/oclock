@@ -142,9 +142,15 @@ function showTime() {
 showTime();
 
 function addMinSec(id){
+    let select = id;
+    let min = 59;
 
+    for(i = 0; i <= min; i++){
+        select.options[select.options.length] = new Option(i < 10 ? "0" + i : i); //Sert à mettre les secondes dans le select
+    }
 }
-
+addMinSec(secondes);
+addMinSec(minutes);
 
 
 
