@@ -171,7 +171,8 @@ startstop.onclick = function(){
         ampm.disabled = true;
 
         alarmElement = hours.value + ":" + minutes.value + ":" + secondes.value + " " + ampm.value;
-        this
+        this.textContent = "Clear Alarm";
+        activeAlarm = true;
     }
 }
 
