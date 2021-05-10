@@ -141,6 +141,9 @@ function showTime() {
 
 showTime();
 
+function addMinSec(id){
+
+}
 
 
 
