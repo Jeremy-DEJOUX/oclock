@@ -149,10 +149,31 @@ function addMinSec(id){
         select.options[select.options.length] = new Option(i < 10 ? "0" + i : i); //Sert à mettre les secondes dans le select
     }
 }
+
+function addHour(id) {
+    let select = id;
+    let min = 12;
+
+    for (i = 0; i <= min; i++) {
+        select.options[select.options.length] = new Option(i < 10 ? "0" + i : i); //Sert à mettre les secondes dans le select
+    }
+}
+
 addMinSec(secondes);
 addMinSec(minutes);
+addHour(hours);
 
+startstop.onclick = function(){
+    if (activeAlarm === false) {
+        hours.disabled = true;
+        minutes.disabled = true;
+        secondes.disabled = true;
+        ampm.disabled = true;
 
+        alarmElement = hours.value + ":" + minutes.value + ":" + secondes.value + " " + ampm.value;
+        this
+    }
+}
 
 
 
