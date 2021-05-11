@@ -122,19 +122,23 @@ clearButton.addEventListener("click", clearLap);
 let timer = document.getElementById('timer');
 let hours = document.getElementById('hours');
 let minutes = document.getElementById('minutes');
-let secondes = document.getElementById('secondes');
+let secondes = document.getElementById('seconds');
 let ampm = document.getElementById('ampm');
 let startstop = document.getElementById('startstop');
 
 let currentTime;
 let alarmElement;
 let activeAlarm = false;
-let sound;
-// sound.loop = true;
+// let sound = alert("Message d'alert");
 
 function showTime() {
     let now = new Date();
     currentTime = now.toLocaleTimeString();
+
+    if(currentTime === alarmElement){
+        console.log("salut");
+        alert("Mon Seign'or il est l'or l'or de se réveillez");
+    }
     timer.textContent = currentTime;
     setTimeout(showTime, 1000);
 }
@@ -170,8 +174,20 @@ startstop.onclick = function(){
         secondes.disabled = true;
         ampm.disabled = true;
 
-        alarmElement = hours.value + ":" + minutes.value + ":" + secondes.value + " " + ampm.value;
-        this
+        alarmElement = hours.value + ":" + minutes.value + ":" + secondes.value;
+        console.log(alarmElement);
+        console.log(currentTime);
+        this.textContent = "Clear Alarm";
+        activeAlarm = true;
+    }
+    else {
+        hours.disabled = false;
+        minutes.disabled = false;
+        secondes.disabled = false;
+        ampm.disabled = false;
+
+        this.textContent = "Set Alarm";
+        activeAlarm = false;
     }
 }
 
