@@ -1,13 +1,4 @@
-// let minuteur = document.getElementById("minuteur");
-// let my_minuteur = document.getElementById("my_minuteur");
-// let send_minuteur = document.getElementById("send_minuteur");
-// let more_time = document.getElementById("more_time");
-// let less_time = document.getElementById("less_time");
-
-
-
-
-// ORLOGE================================
+//==================== HORLOGE===================================================
 
 let myVar = setInterval(myTimer, 1000);
 
@@ -20,7 +11,7 @@ function myTimer() {
 
 
 
-// CHRONOMETRE=========================
+// ======================CHRONOMETRE==================================================================
 
 function timeToString(time) {
       let diffInHrs = time / 3600000;
@@ -117,13 +108,15 @@ clearButton.addEventListener("click", clearLap);
 
 
 
-// REVEIL======================
+
+
+
+// ====================REVEIL=====================================================================
 
 let timer = document.getElementById('timer');
 let hours = document.getElementById('hours');
 let minutes = document.getElementById('minutes');
 let secondes = document.getElementById('seconds');
-let ampm = document.getElementById('ampm');
 let startstop = document.getElementById('startstop');
 
 let currentTime;
@@ -136,12 +129,13 @@ function showTime() {
     currentTime = now.toLocaleTimeString();
 
     if(currentTime === alarmElement){
-        console.log("salut");
         alert("Mon Seign'or il est l'or l'or de se réveillez");
     }
     timer.textContent = currentTime;
     setTimeout(showTime, 1000);
 }
+
+
 
 showTime();
 
@@ -156,7 +150,7 @@ function addMinSec(id){
 
 function addHour(id) {
     let select = id;
-    let min = 12;
+    let min = 24;
 
     for (i = 0; i <= min; i++) {
         select.options[select.options.length] = new Option(i < 10 ? "0" + i : i); //Sert à mettre les secondes dans le select
@@ -172,7 +166,6 @@ startstop.onclick = function(){
         hours.disabled = true;
         minutes.disabled = true;
         secondes.disabled = true;
-        ampm.disabled = true;
 
         alarmElement = hours.value + ":" + minutes.value + ":" + secondes.value;
         console.log(alarmElement);
@@ -184,7 +177,6 @@ startstop.onclick = function(){
         hours.disabled = false;
         minutes.disabled = false;
         secondes.disabled = false;
-        ampm.disabled = false;
 
         this.textContent = "Set Alarm";
         activeAlarm = false;
