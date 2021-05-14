@@ -1,6 +1,6 @@
 //==================== HORLOGE===================================================
 
-let myVar = setInterval(myTimer, 1000);
+setInterval(myTimer, 1000);
 
 function myTimer() {
     let d = new Date();
