@@ -187,35 +187,35 @@ startstop.onclick = function(){
 
 
 
-// MINUTEUR======================
+// ==============================MINUTEUR========================================
 
 let startMinuteur = document.getElementById('startMinuteur');
 
 function startTimer(duration, display) {
-    var timer = duration, hours,
-        minutes, seconds;
+    var timer = duration, minutes, seconds;
     setInterval(function () {
-        hours = parseInt(timer / 60, 10);
-        minutes = parseInt((timer - hours) / 60, 10);
-        seconds = parseInt((timer - seconds) % 60, 10);
-
-        hours = hours < 10 ? "0" + minutes : minutes;
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
+        display.innerHTML = minutes + ":" + seconds;
 
-        display.innerHTML = hours + ":" + minutes + ":" + seconds;
-
-        if (--timer < 0) {
-            timer = duration;
-        }
     }, 1000);
 
     
 }
 
+console.log(document.querySelector('#timeDisplay'))
+
 startMinuteur.onclick = function () {
+    
     var fiveMinutes = (document.getElementById('time').value * 60);
-    console.log(document.getElementById('timer').value)
-    display = document.querySelector('#timeDisplay');
-    startTimer(fiveMinutes, display);
+    var display = document.querySelector('#timeDisplay');
+
+    if (fiveMinutes > 0){
+        startTimer(fiveMinutes, display);
+        startMinuteur.style.display = "none";
+    }
+
+    console.log(document.querySelector('#timeDisplay').value)
 };
