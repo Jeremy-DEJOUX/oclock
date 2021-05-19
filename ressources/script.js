@@ -192,21 +192,25 @@ startstop.onclick = function(){
 let startMinuteur = document.getElementById('startMinuteur');
 
 function startTimer(duration, display) {
-    var timer = duration,
+    var timer = duration, hours,
         minutes, seconds;
     setInterval(function () {
-        minutes = parseInt(timer / 60, 10);
-        seconds = parseInt(timer % 60, 10);
+        hours = parseInt(timer / 60, 10);
+        minutes = parseInt((timer - hours) / 60, 10);
+        seconds = parseInt((timer - seconds) % 60, 10);
 
+        hours = hours < 10 ? "0" + minutes : minutes;
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
-        display.textContent = minutes + ":" + seconds;
+        display.innerHTML = hours + ":" + minutes + ":" + seconds;
 
         if (--timer < 0) {
             timer = duration;
         }
     }, 1000);
+
+    
 }
 
 startMinuteur.onclick = function () {
